@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Login </title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" type="image/png" href="icon.ico">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+	</head>
+<body>
+
+		<header>
+        <nav class="navigation">
+            <a href ="home.html" target="_blank"> Home </a>
+            <a href ="about.html"> About </a>	
+            <a href ="#"> Gallery </a>
+            <a href ="#"> Products</a>
+            <h2 class ="logo">Vehicle</h2>
+            <h6 class ="logo1">Accessories</h6>
+            <a href ="#" class="pro"> Contact Us </a>
+            <a href="index.html" class="btnLogin-popup"> Login</a>
+        </nav>
+    </header>
+	<div class="mid">Jaguar Vehicle </div>
+    <div class="mid1">Accessories</div>
+    <div class="mid2">Durability and Good Quality</div>
+
+		<div class="wrapper">
+			<div class="form-box login">
+				<h2>Login</h2>
+				
+					<div class="input-box">
+						<span class="icon"><ion-icon name="mail-open"></ion-icon></span>
+						<input type="email" name="Login" id="email" required>
+						<label>Email</label>
+					</div>
+					<div class="input-box">
+						<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+						<input type="password" name="Lpassword" id="password"required>
+						<label>Password</label>
+					</div>
+			
+					<button type="submit" class="btn" onclick="auth()"/>Login</button>
+			</div>
+			
+		</div>
+		<script src="script.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script>
+			function auth(){
+				var email = document.getElementById("email").value;
+				var password = document.getElementById("password").value;
+				if(email =="admin@email.com" && password=="admin123"){
+					window.location.assign("home.html");
+					alert("Login Successfull");
+				}
+				else{
+					alert("Invalid Information");
+					return;
+				}
+			}
+		</script>
+</body>
+</html>
